@@ -1,0 +1,22 @@
+.footer{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 235px 0 35px;
+    @media screen and (max-width: 680px){
+        padding: 100px 0 35px;
+    }
+    .btn{
+        font-size: 32px;
+        margin-bottom: 27px;
+        padding: 14px 57px 14px 17px;
+    }
+    &__copy{
+        color: $white;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 1.05px;
+        opacity: 0.5;
+    }
+}

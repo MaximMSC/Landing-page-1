@@ -1,0 +1,71 @@
+section.sleep
+    .container
+        .title
+            span.title-bg.wow.fadeInLeft(data-wow-offset="300") Sleep
+            h3 Sleep
+        .sleep-slider.slider-content
+            .slider-content__item
+                .slider-content__header(style="background: url('../../static/images/content/sleep-slider/sleep-slider-bg.png') no-repeat")
+                    .slider-content__subtitle.wow.fadeInRight(data-wow-offset="300")
+                        .title-block.title-block--size-small
+                            span.title-block__text Resorts
+                            span.title-block__title
+                                | Auberge
+                                span |
+                                | Australia
+                        .slider-navigation
+                            .slider-navigation__prev.surf-slider-navigation__prev
+                                +icon('arrow-left','slider-navigation__icon')
+                            .slider-navigation__next.surf-slider-navigation__next
+                                +icon('arrow-right','slider-navigation__icon')
+                .slider-content__descr(style="background-image: url('../../static/images/content/sleep-slider/hammock.png')").wow.fadeInUp(data-wow-offset="300")
+                    .slider-content__descr--inner
+                        .title-block.title-block--size-small
+                            span.title-block__text.title-block__text--left Rating
+                            span.title-block__title Excellent
+                        ul.rating-block
+                            li.rating-block__star
+                                img(src="../../static/images/content/sleep-slider/star.svg").rating-block__star
+                            li.rating-block__star
+                                img(src="../../static/images/content/sleep-slider/star.svg").rating-block__star
+                            li.rating-block__star
+                                img(src="../../static/images/content/sleep-slider/star.svg").rating-block__star
+                            li.rating-block__star
+                                img(src="../../static/images/content/sleep-slider/star.svg").rating-block__star
+                            li.rating-block__star
+                                img(src="../../static/images/content/sleep-slider/star.svg").rating-block__star
+                .slider-content__info
+                    .slider-info__item.wow.fadeInUp(data-wow-offset="300" data-wow-delay=".3s")
+                        span.slider-info__subtitle Resort
+                        span.slider-info__title 
+                            | Auberge
+                            br
+                            | Australia       
+                    .slider-info__item.wow.fadeInUp(data-wow-offset="300" data-wow-delay=".6s")
+                        span.slider-info__subtitle # of Nights
+                        .slider-info__title
+                            .quantity
+                                input(type="number" min="1" max="9" step="1" value="1").nights
+                                span Nights
+                                .quantity-nav
+                                    .quantity-button.quantity-down -
+                                    .quantity-button.quantity-up +
+                    .slider-info__item.wow.fadeInUp(data-wow-offset="300" data-wow-delay=".9s")
+                        span.slider-info__subtitle # of Guests
+                        .slider-info__title
+                            .quantity
+                                input(type="number" min="1" max="9" step="1" value="1").guests
+                                span Guests
+                                .quantity-nav
+                                    .quantity-button.quantity-down -
+                                    .quantity-button.quantity-up + 
+                    .slider-info__item.wow.fadeInUp(data-wow-offset="300" data-wow-delay="1.2s")
+                        span.slider-info__subtitle Pricing
+                        span.slider-info__title 
+                            span.summ(data-nights="55" data-guests="25")
+                            span USD
+                        span.slider-info__text Per Night
+                .slider-content__btn
+                    a(href="0").btn
+                            span.btn__first book
+                            span.btn__second flight

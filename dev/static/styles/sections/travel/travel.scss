@@ -1,0 +1,182 @@
+.travel{
+    background: url('../../static/images/content/travel-slider/travel-bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding-bottom: 265px;
+    @media screen and(max-width: $tablet-wide){
+        background-position: bottom 360px right;
+    }
+    @media screen and(max-width: $tablet-wide){
+        padding-top: 0;
+    }
+    .slider-navigation__icon{
+        opacity: 0.25;
+    }
+}
+
+.slider-content{
+    &__header{
+        background-position: top left;
+        height: 780px;
+    }
+    &__subtitle{
+        padding-right: 80px;
+        padding-top: 120px;
+        .title-block{
+            margin-bottom: 25px;
+        }
+    }
+    &__btn{
+        display: flex;
+        justify-content: center;
+        .btn{
+            @media screen and (max-width: $phone-size){
+                font-size: 30px;
+                line-height: 30px;
+            }
+            &__second{
+                &::after{
+                    @media screen and (max-width: $phone-size){
+                        top: 21px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .travel-slider-navigation,.slider-content-navigation{
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: flex-end;
+//     z-index: 2;
+//     &__prev{
+//         margin-right: 20px;
+//     }
+//     &__icon{
+//         fill: $white;
+//         height: 20px;
+//         opacity: 0.25;
+//         width: 24px;
+//     }
+// }
+
+.slider-content{
+    &__info{
+        color: $white;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 75px;
+        @media screen and(max-width: $tablet-wide){
+            flex-direction: column;
+            padding-left: 20px;
+        }
+    }
+    &__descr{
+        padding: 160px 0 0 0px;
+        background-position: right center;
+        background-repeat: no-repeat;
+        min-height: 320px;
+        margin-top: -230px;
+        @media screen and(max-width: $tablet-size){
+            background-size: 480px;
+        }
+        @media screen and(max-width: $tablet-wide){
+            background-position: right -93px
+        }
+
+        @media screen and (max-width: 480px){
+            background-size: 320px;
+            background-position: right -49px;
+        }
+        .title-block{
+            margin-right: 20px;
+            align-items: flex-start;
+            padding-left: 20px;
+        }
+        &--inner{
+            display: flex;
+            align-items: center;
+            .title-block{
+                @media screen and(max-width: $tablet-wide){
+                    margin-bottom: 0;
+                }
+            }
+            img{
+                fill: $green;
+            }
+        }
+    }
+}
+
+.slider-info{
+    &__item{
+        position: relative;
+        height: 200px;
+        max-height: 200px;
+        width: calc(25% - 15px);
+        @media screen and(max-width: $tablet-wide){
+            height: 120px;
+            max-height: 120px;
+        }
+        @media screen and(max-width: $phone-size){
+            width: 38%;
+        }
+    }
+    &__title{
+        display: block;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 36px;
+        padding: 10px 0 0 40px;
+        position: relative;
+        @media screen and(max-width: $tablet-size){
+            font-size: 30px;
+            line-height: 30px;
+        }
+        @media screen and(max-width: $tablet-wide){
+            padding-left: 0;
+        }
+        @media screen and(max-width: 480px){
+            font-size: rem(21px);
+            line-height: rem(21px);
+        }
+    }
+    &__subtitle{
+        font-size: 18px;
+        line-height: 22px;
+        text-align: right;
+        letter-spacing: 8px;
+        left: -97px;
+        opacity: 0.5;
+        position: absolute;
+        top: 97px;
+        text-align: right;
+        transform: rotate(-90deg);
+        width: 200px;
+        @media screen and(max-width: $tablet-wide){
+            position: static;
+            letter-spacing: 6px;
+        }
+        @media screen and(max-width: $phone-size){
+            font-size: 14px;
+            line-height: 14px;
+        }
+        
+    }
+    &__text{
+        color: $white;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 36px;
+        opacity: 0.75;
+        padding-left: 110px;
+        letter-spacing: 5.25px;
+        @media screen and(max-width: $tablet-wide){
+            padding-left: 0;
+        }
+        @media screen and(max-width: 480px){
+            letter-spacing: 2px;
+        }
+    }
+}

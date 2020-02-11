@@ -1,0 +1,329 @@
+.surf{
+    padding: 160px 0 210px;
+    background: url('../images/surf-location.png') no-repeat;
+    background-position: right 200px;
+    background-size: auto;
+    @media screen and (max-width: $tablet-size){
+      padding-top: 100px;
+    }
+    @media screen and (max-width: $tablet-wide){
+      padding: 160px 0 100px;
+    }
+    @media screen and (max-width: 2014px){
+      background: none;
+    }
+}
+
+.surf__subtitle{
+    padding-right: 80px;
+    @media screen and (max-width: $tablet-wide){
+      padding-right: 20px;
+    }
+  }
+  
+.surf-slider{
+    padding-top: 110px;
+    .slick-current{
+      .surf-slider__inner{
+        background: rgba(#1C2121,.3);
+      }
+      .surf-slider__btn{
+        display: block;
+      }      
+    }
+    .slick-slide:nth-child(4n+1){
+        margin-top: 32px; 
+    }
+    .slick-slide:nth-child(4n+3){
+      margin-top: 89px; 
+    }
+    &__item{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 750px;
+      cursor: pointer;
+      position: relative;
+      transition: all .5s;
+      @media screen and (max-width: $tablet-size){
+        height: 650px;
+      }
+      .slick-current{
+        &.surf-slider__item{
+          @media screen and (max-width: 720px){
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+      
+      &:hover{
+        .surf-slider__inner{
+          background: rgba(#1C2121,.3);
+        }
+        .surf-slider__btn{
+          display: block;
+        }
+      }
+    }
+    &__inner{
+      background: rgba(#1C2121,.85);
+      min-height: 100%;
+      position: relative;
+      padding: 80px 40px;
+    }
+    &__title{
+      color: $white;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 36px;
+    }
+    &__location{
+      bottom: 80px;
+      color: $white;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 8px;
+      left: 40px;
+      position: absolute;
+      transform: rotate(-90deg);
+      width: 0;
+      white-space: nowrap;
+      height: 0;
+    }
+    &__btn{
+      bottom: 0;
+      position: absolute;
+      display: none;
+    }
+}
+
+
+
+.surf-map{
+    max-width: 1200px;
+    min-height: 635px;
+    background: url('../../static/images/content/surf-map/bg-map.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    @media screen and (max-width: $tablet-size){
+        max-width: 900px;
+        height: 515px;
+        background-size: contain;
+    }
+    @media screen and (max-width: $tablet-wide){
+        height: 300px;
+        min-height: 300px;
+    }
+    .slick-list{
+        min-height: 635px;
+        @media screen and (max-width: $tablet-wide){
+            min-height: 280px;
+        }
+        &.slick-list{
+            overflow: hidden;
+        }
+    }
+    .slick-current{
+        @media screen and (max-width: $tablet-wide){
+            .surf-map-dots__content{
+                background: rgba(1, 1, 150, 0.9);
+            } 
+        }
+        .surf-map-dots__content{
+            display: block;
+        }
+    }
+    .slick-track{
+        
+        @media screen and (min-width: $tablet-wide){
+            transform: translate3d(0, 0, 0)!important;
+        }
+        @media screen and (max-width: $tablet-wide){
+            height: 280px;
+        }
+    }
+    
+    .slick-slider{
+        @media screen and (max-width: $tablet-wide){
+            min-width: 300px;
+        }
+      }
+}
+
+.surf-map-dots{
+    outline: none;
+    position: relative;
+    @media screen and (max-width: $tablet-wide){
+        height: 200px;
+        position: static;
+        width: 200px;
+    }
+    &.slick-slide{
+        @media screen and (max-width: 680px){
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &--1{
+        top: 335px;
+        left: 0;
+    }
+    &--2{
+        top: 288px;
+        left: -15px;
+        .surf-map-dots__circle{
+            position: relative;
+            &::after{
+                content: '';
+                background: url('../../static/images/content/surf-map/mark.svg');
+                display: block;
+                height: 17px;
+                fill: blue($color: #000000);
+                position: absolute;
+                right: -25px;
+                width: 14px;
+            }
+        }
+    }
+    &--3{
+        top: 330px;
+        left: 25px;
+    }
+    &--4{
+        top: 470px;
+        left: -25px;
+    }
+    &--5{
+        top: 230px;
+        left: -65px;
+    }
+    &--6{
+        top: 550px;
+        left: -120px;
+    }
+    &--7{
+        top: 375px;
+        left: -95px;
+    }
+    &--8{
+        top: 470px;
+        left: 35px;
+        .surf-map-dots__content{
+            transform: translateX(-261px);
+            @media screen and (max-width: $tablet-wide){
+                transform: translateX(0);
+            }
+            &:before{
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+    &__circle{
+        border-radius: 50%;
+        box-shadow: 0px 0px 16px rgba(74, 246, 205, 0.544186);
+        background: $green;
+        cursor: pointer;
+        height: 24px;
+        outline: none;
+        width: 24px;
+        @media screen and (max-width: $tablet-wide){
+            display: none;
+        }
+    }
+    &__content{
+        bottom: 35px;
+        display: none;
+        color: $white;
+        background: rgba(#0f1010,.7);
+        border-radius: 10px;
+        outline: none;
+        padding: 25px 31px 31px 32px;
+        position: absolute;
+        width: 285px;
+        @media screen and (max-width: $tablet-wide){
+            display: block;
+        }
+       
+        &::before{
+            content: '';
+            height: 0;
+            width: 0;
+            border-bottom: 20px solid $green;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            position: absolute;
+            left: 0;
+            bottom: -21px;
+            @media screen and (max-width: $tablet-wide){
+                display: none;
+            }
+        }
+    }
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+    }
+    &__title{
+        border-bottom: 1px solid $green;
+        display: block;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 22px;
+        padding-bottom: 13px;
+        margin-bottom: 8px;
+    }
+    &__subtitle{
+        display: block;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px
+    }
+    &__icon{
+        fill: $white;
+        height: 13px;
+        width: 16px;
+    }
+    &__img{
+        margin-bottom: 5px;
+    }
+    &__number{
+        display: block;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 10px;
+    }
+    &__name{
+        display: block;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    &__block{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.surf-map-dots__link{
+    margin-left: auto;
+}
+
+.surf-slider__navigation{
+    top: 48%;
+    opacity: 0.2;
+    @media screen and (max-width: $tablet-wide){
+        top: 43%;
+    }
+}

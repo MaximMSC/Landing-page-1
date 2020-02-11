@@ -1,0 +1,29 @@
+aside.header-aside
+    .header-aside__logo.logo
+        a(href="javascript:void(0)").logo__img
+            img(src="../static/images/general/logo.svg", alt="")
+    nav.nav-aside
+        ul.nav-aside__list
+            li.nav-aside__item
+                a(href="0").nav-aside__link
+                    +icon('nav-icon-surf','nav-aside__icon nav-aside__icon--surf')
+                    span.nav-aside__text Surf
+            li.nav-aside__item
+                a(href="0").nav-aside__link
+                    +icon('nav-icon-travel','nav-aside__icon nav-aside__icon--travel')
+                    span.nav-aside__text Travel
+            li.nav-aside__item
+                a(href="0").nav-aside__link
+                    +icon('nav-icon-camp','nav-aside__icon nav-aside__icon--camp')
+                    span.nav-aside__text Sleep
+            li.nav-aside__item
+                a(href="0").nav-aside__link
+                    +icon('nav-icon-shop','nav-aside__icon nav-aside__icon--shop')
+                    span.nav-aside__text Shop
+    .search
+        +icon('search','search__icon')
+    .header-date 20
+        span 06 | 2019
+    .header-location
+        +icon('location','location__icon')
+        span.header-location__city California
